@@ -39,7 +39,8 @@ var presentation = io.on('connection', function (socket) {
 	socket.on('load', function(data){
 
 		socket.emit('access', {
-			access: (data.key === secret ? "granted" : "denied")
+			//access: (data.key === secret ? "granted" : "denied")
+			access: true
 		});
 
 	});
