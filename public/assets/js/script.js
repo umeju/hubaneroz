@@ -20,7 +20,9 @@ $(function() {
 	var key = "", animationTimeout;
 
 	// When the page is loaded it asks you for a key and sends it to the server
-
+socket.emit('load', {
+				key: key
+			});
 	form.submit(function(e){
 
 		e.preventDefault();
@@ -44,7 +46,7 @@ $(function() {
 
 		// Check if we have "granted" access.
 		// If we do, we can continue with the presentation.
-
+data.access === "granted"
 		if(data.access === "granted") {
 
 			// Unblur everything
