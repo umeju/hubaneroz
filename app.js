@@ -40,7 +40,7 @@ var presentation = io.on('connection', function (socket) {
 
 		socket.emit('access', {
 			//access: (data.key === secret ? "granted" : "denied")
-			access: true
+			access: "granted"
 		});
 
 	});
@@ -51,14 +51,14 @@ var presentation = io.on('connection', function (socket) {
 
 		// Check the secret key again
 
-		if(data.key === secret) {
+		//if(data.key === secret) {
 
 			// Tell all connected clients to navigate to the new slide
 			
 			presentation.emit('navigate', {
 				hash: data.hash
 			});
-		}
+		//}
 
 	});
 
