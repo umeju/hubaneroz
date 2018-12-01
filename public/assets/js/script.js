@@ -94,21 +94,21 @@ data.access === "granted"
 
 		}
 		else {
-
+presentation.removeClass('blurred');
 			// Wrong secret key
 
-			clearTimeout(animationTimeout);
+			//clearTimeout(animationTimeout);
 
 			// Addding the "animation" class triggers the CSS keyframe
 			// animation that shakes the text input.
 
-			secretTextBox.addClass('denied animation');
+			//secretTextBox.addClass('denied animation');
 			
-			animationTimeout = setTimeout(function(){
-				secretTextBox.removeClass('animation');
-			}, 1000);
+			//animationTimeout = setTimeout(function(){
+			//	secretTextBox.removeClass('animation');
+			//}, 1000);
 
-			form.show();
+			//form.show();
 		}
 
 	});
